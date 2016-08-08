@@ -1,0 +1,25 @@
+{
+  "name": "makers-bnb",
+  "version": "1.0.0",
+  "description": "User Stories 1. 2. 3.",
+  "main": "index.js",
+  "dependencies": {
+    "data-mapper-js": "^0.1.1",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quad-piece/makers-bnb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quad-piece/makers-bnb/issues"
+  },
+  "homepage": "https://github.com/quad-piece/makers-bnb#readme"
+}

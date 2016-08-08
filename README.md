@@ -1,3 +1,3 @@
 # makers-bnb
 
-User Stories
+User Stories:

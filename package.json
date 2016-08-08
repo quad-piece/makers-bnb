@@ -1,0 +1,34 @@
+{
+  "name": "makers-bnb",
+  "version": "1.0.0",
+  "description": "User Stories 1. 2. 3.",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "data-mapper-js": "^0.1.1",
+    "express": "^4.14.0",
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quad-piece/makers-bnb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quad-piece/makers-bnb/issues"
+  },
+  "homepage": "https://github.com/quad-piece/makers-bnb#readme"
+}

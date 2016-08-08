@@ -1,6 +1,6 @@
 # makers-bnb
 
-``
+```
 As a new user
 So I can list and view properties 
 I want to be able to sign up using my username, email and password 

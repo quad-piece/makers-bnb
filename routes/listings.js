@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var listingsDB = require('../models/listing')
 
 // router.get('/', function(req, res, next) {
 //   res.render('/listings', { title: 'Listings' });
@@ -10,7 +11,9 @@ router.get('/new', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-  res.redirect('/listings');
+  listing = new listingsDB(req.body);
+  listing.save();
+   res.redirect('/listings');
 });
 
 router.get('/', function(req, res, next) {

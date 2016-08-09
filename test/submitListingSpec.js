@@ -37,5 +37,10 @@ describe('new listings page', function() {
     });
   });
 
+  it('should show listings', function(){
+    
+    });
+
+
 
 });

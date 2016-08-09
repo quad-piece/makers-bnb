@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+  h1= title
+
+  form(name="submit-listing", method="post")
+    div.input
+      span.label Title
+      input(class="title-input", type="text", name="title")
+      br
+      br
+      span.label Description
+      input(class="description-input", type="text", name="description")
+      br
+      br
+      span.label Location
+      input(class="location-input", type="text", name="location")
+      br
+      br
+      span.label Start Date
+      input(class="start-date-input", type="text", name="start-date")
+      br
+      br
+      span.label End Date
+      input(class="end-date-input", type="text", name="end-date")
+      br
+      br
+      span.label Price
+      input(class="price-input", type="text", name="price")
+    div.actions
+      br
+      input(type="submit", value="Submit Listing")

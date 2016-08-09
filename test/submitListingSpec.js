@@ -1,8 +1,8 @@
 process.env.NODE_ENV = 'test';
-var Browser = require('zombie');
+const Browser = require('zombie');
 var chai = require('chai');
 var expect = chai.expect;
-var assert = require('assert');
+var assert = chai.assert;
 
 describe('new listings page', function() {
   before(function() {
@@ -10,7 +10,7 @@ describe('new listings page', function() {
   });
 
   before(function(done) {
-    this.browser.visit('/listings', done);
+    this.browser.visit('/listings/new', done);
   });
 
   it('should show contact a form', function(){
@@ -21,7 +21,20 @@ describe('new listings page', function() {
     this.browser.assert.element('.start-date-input');
     this.browser.assert.element('.end-date-input');
     this.browser.assert.element('.price-input');
+  });
 
+  it('should submit the form', function(){
+    this.browser
+    .fill("title", "Beach House")
+    .fill("description", "Beautiful Beach House")
+    .fill("location", "LA")
+    .fill("start-date", "01.01.16")
+    .fill("end-date", "30.01.16")
+    .fill("price", 20)
+    this.browser.pressButton('Submit Listing!');
+    this.browser.wait().then( function() {
+      expect(this.browser.html("h1")).toContain("Listing form submitted");
+    });
   });
 
 

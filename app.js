@@ -1,15 +1,4 @@
 var express = require('express');
-<<<<<<< HEAD
-var app = express();
-
-app.get('/', function(req, res) {
-  res.send('Hello World!');
-});
-
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
-});
-=======
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -69,4 +58,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
->>>>>>> c7970b0c95f10b168fced49a336d82cb2acec69b

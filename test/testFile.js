@@ -28,7 +28,7 @@ describe('user visits signup page', function(){
     });
 
     it('should see welcome page', function() {
-      this.browser.text('HELO');
+      this.browser.assert.text('body', 'HELO');
     });
   });
 });

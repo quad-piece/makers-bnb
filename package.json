@@ -18,7 +18,8 @@
     "morgan": "~1.7.0",
     "pug": "^2.0.0-beta4",
     "request": "^2.74.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "thinky": "^2.3.4"
   },
   "devDependencies": {
     "zombie": "^4.2.1"

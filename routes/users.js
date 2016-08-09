@@ -14,7 +14,7 @@ router.get('/new', function(req, res, next) {
 router.post('/new/pageholder', function(req, res, next) {
   user = new userDB(req.body);
   user.save();
-  res.send('HELO')
+  res.send('Hello')
 });
 
 module.exports = router;

@@ -1,6 +1,3 @@
-
-
-
 const Browser = require('Zombie');
 var assert = require('assert');
 
@@ -28,7 +25,7 @@ describe('user visits signup page', function(){
     });
 
     it('should see welcome page', function() {
-      this.browser.assert.text('body', 'HELO');
+      this.browser.assert.text('body', 'Hello');
     });
   });
 });

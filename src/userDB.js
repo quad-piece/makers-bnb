@@ -9,6 +9,7 @@ var thinky = require('thinky')({
 var r = thinky.r;
 
 var Users = thinky.createModel('people', {
+    id: String,
     name: String,
     userName: String,
     email: String,

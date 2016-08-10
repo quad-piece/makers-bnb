@@ -17,15 +17,11 @@ var Listing = thinky.createModel("Listing", {
     price: type.number(),
 });
 
-  var getListings = function(){
-    Listing.run().then(function(listings) {
-      console.log("These are the lisitngs:");
-      console.log(listings);
-    return listings;
-    });
-  };
+var getListings = function() {
+
+};
 
 // Join the modelss
 // Listing.belongsTo(Author, "author", "idAuthor", "id");
 
-module.exports = Listings;
+module.exports = Listing;

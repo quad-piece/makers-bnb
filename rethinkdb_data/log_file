@@ -390,3 +390,24 @@
 2016-08-09T17:01:40.915137000 8.060720s info: Table d383a0b3-1def-4f5b-b127-e5f41c2a6fe7: Starting a new Raft election for term 1.
 2016-08-09T17:01:40.915601000 8.061184s info: Table d383a0b3-1def-4f5b-b127-e5f41c2a6fe7: Added replica on this server.
 2016-08-09T17:01:40.948836000 8.094419s info: Table d383a0b3-1def-4f5b-b127-e5f41c2a6fe7: This server is Raft leader for term 1. Latest log index is 0.
+2016-08-10T12:29:15.989507000 0.304666s notice: Running rethinkdb 2.3.4 (CLANG 7.3.0 (clang-703.0.31))...
+2016-08-10T12:29:15.993532000 0.308688s notice: Running on Darwin 15.3.0 x86_64
+2016-08-10T12:29:15.993578000 0.308733s notice: Loading data from directory /Users/georgiamills/Coding_Projects/airbnb/makers-bnb/rethinkdb_data
+2016-08-10T12:29:16.033303000 0.348458s info: Automatically using cache size of 908 MB
+2016-08-10T12:29:16.034590000 0.349745s notice: Listening for intracluster connections on port 29015
+2016-08-10T12:29:16.081880000 0.397035s notice: Listening for client driver connections on port 28015
+2016-08-10T12:29:16.081987000 0.397142s notice: Listening for administrative HTTP connections on port 8080
+2016-08-10T12:29:16.081990000 0.397144s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2016-08-10T12:29:16.081991000 0.397146s notice: Listening on driver addresses: 127.0.0.1, ::1
+2016-08-10T12:29:16.082085000 0.397240s notice: Listening on http addresses: 127.0.0.1, ::1
+2016-08-10T12:29:16.082088000 0.397243s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-08-10T12:29:16.082090000 0.397245s notice: Server ready, "Georgias_MacBook_Pro_local_qu4" 5f05a3e1-ec95-46a1-b188-fe6ca98679eb
+2016-08-10T12:29:17.323855000 1.638960s info: Table e3f66531-bdda-42ba-98a8-a5d6ead819a5: Starting a new Raft election for term 7.
+2016-08-10T12:29:17.350308000 1.665413s info: Table e3f66531-bdda-42ba-98a8-a5d6ead819a5: This server is Raft leader for term 7. Latest log index is 18.
+2016-08-10T12:29:17.387379000 1.702484s info: Table 60ca5111-a1b9-40c9-9ff5-bc4c5b045b4d: Starting a new Raft election for term 7.
+2016-08-10T12:29:17.408124000 1.723229s info: Table 60ca5111-a1b9-40c9-9ff5-bc4c5b045b4d: This server is Raft leader for term 7. Latest log index is 19.
+2016-08-10T12:29:17.593747000 1.908852s info: Table d383a0b3-1def-4f5b-b127-e5f41c2a6fe7: Starting a new Raft election for term 2.
+2016-08-10T12:29:17.616727000 1.931832s info: Table 17973274-756f-47a3-b592-703f0ea9d112: Starting a new Raft election for term 7.
+2016-08-10T12:29:17.627583000 1.942688s info: Table d383a0b3-1def-4f5b-b127-e5f41c2a6fe7: This server is Raft leader for term 2. Latest log index is 3.
+2016-08-10T12:29:17.694780000 2.009885s info: Table 17973274-756f-47a3-b592-703f0ea9d112: This server is Raft leader for term 7. Latest log index is 19.
+2016-08-10T12:35:02.582390000 346.888917s error: Failed to parse one or more lines from the log file, the contents of the `logs` system table will be incomplete. The following parse error occurred: cannot parse log message (2) while parsing "<<<<<<< HEAD"

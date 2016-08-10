@@ -15,11 +15,8 @@ router.post('/', function(req, res, next) {
 router.get('/', function(req, res, next) {
   var mylistings;
     listingsDB.run().then(function(allListings) {
-    console.log("These are the listings:");
-    console.log(allListings);
     mylistings = allListings;
   }).then(function() {
-    console.log(mylistings)
     res.render('../views/listings/index', { listings: mylistings })
   });
 });

@@ -7,7 +7,7 @@ var type = thinky.type;
 var r = thinky.r;
 
 // Create a model - the table is automatically created
-var Listings = thinky.createModel("Listing", {
+var Listing = thinky.createModel("Listing", {
     id: type.string(),
     title: type.string(),
     description: type.string(),
@@ -16,6 +16,16 @@ var Listings = thinky.createModel("Listing", {
     end_date: type.date(),
     price: type.number(),
 });
-// Join the models
+
+  var getListings = function(){
+    Listing.run().then(function(listings) {
+      console.log("These are the lisitngs:");
+      console.log(listings);
+    return listings;
+    });
+  };
+
+// Join the modelss
 // Listing.belongsTo(Author, "author", "idAuthor", "id");
+
 module.exports = Listings;

@@ -28,8 +28,8 @@ describe('new listings page', function() {
     .fill("title", "Beach House")
     .fill("description", "Beautiful Beach House")
     .fill("location", "LA")
-    .fill("start-date", "01.01.16")
-    .fill("end-date", "30.01.16")
+    .fill("start-date", "2016-08-16")
+    .fill("end-date", "2016-08-26")
     .fill("price", 20)
     this.browser.pressButton('Submit Listing!');
     this.browser.wait().then( function() {
@@ -38,7 +38,7 @@ describe('new listings page', function() {
   });
 
   it('should show listings', function(){
-    
+
     });
 
 

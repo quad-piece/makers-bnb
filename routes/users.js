@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var bcrypt = require('bcrypt');
+var flash = require('connect-flash');
 var userDB = require('../models/userDB')
+
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -11,10 +14,21 @@ router.get('/new', function(req, res, next) {
   res.render('userNew', { title: 'title' })
 });
 
-router.post('/new/pageholder', function(req, res, next) {
-  user = new userDB(req.body);
-  user.save();
-  res.send('Hello')
+router.post('/new', function(req, res, next) {
+  console.log(req.param('password'));
+  if (req.param('password')[0] !== req.param('password')[1]) {
+    req.flash('error', 'Passwords do not match');
+    res.redirect('/users/new');
+    return
+  } else {
+    userDB.save({
+      name: req.param('name'),
+      userName: req.param('userName'),
+      email: req.param('email'),
+      password: bcrypt.hashSync(req.param('password')[0], bcrypt.genSaltSync(8))
+    });
+    res.redirect('/users');
+  }
 });
 
 module.exports = router;

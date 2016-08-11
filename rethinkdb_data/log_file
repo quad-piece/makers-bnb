@@ -220,6 +220,28 @@
 2016-08-09T16:07:00.846993000 1.704195s info: Table 17973274-756f-47a3-b592-703f0ea9d112: This server is Raft leader for term 4. Latest log index is 9.
 2016-08-09T16:07:01.089406000 1.946608s info: Table 60ca5111-a1b9-40c9-9ff5-bc4c5b045b4d: Starting a new Raft election for term 4.
 2016-08-09T16:07:01.101746000 1.958948s info: Table 60ca5111-a1b9-40c9-9ff5-bc4c5b045b4d: This server is Raft leader for term 4. Latest log index is 9.
+<<<<<<< HEAD
+2016-08-10T10:26:59.868798000 0.050633s notice: Running rethinkdb 2.3.4 (CLANG 7.0.2 (clang-700.1.81))...
+2016-08-10T10:26:59.874243000 0.056075s notice: Running on Darwin 14.5.0 x86_64
+2016-08-10T10:26:59.874317000 0.056148s notice: Loading data from directory /Users/dan/Projects/makers/week-5/makers-bnb/rethinkdb_data
+2016-08-10T10:26:59.912215000 0.094046s info: Automatically using cache size of 100 MB
+2016-08-10T10:26:59.912225000 0.094055s warn: Cache size does not leave much memory for server and query overhead (available memory: 565 MB).
+2016-08-10T10:26:59.912229000 0.094060s warn: Cache size is very low and may impact performance.
+2016-08-10T10:26:59.913478000 0.095309s notice: Listening for intracluster connections on port 29015
+2016-08-10T10:26:59.964698000 0.146528s notice: Listening for client driver connections on port 28015
+2016-08-10T10:26:59.965355000 0.147186s notice: Listening for administrative HTTP connections on port 8080
+2016-08-10T10:26:59.965378000 0.147208s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2016-08-10T10:26:59.965381000 0.147211s notice: Listening on driver addresses: 127.0.0.1, ::1
+2016-08-10T10:26:59.965383000 0.147213s notice: Listening on http addresses: 127.0.0.1, ::1
+2016-08-10T10:26:59.965386000 0.147216s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-08-10T10:26:59.965388000 0.147218s notice: Server ready, "Georgias_MacBook_Pro_local_qu4" 5f05a3e1-ec95-46a1-b188-fe6ca98679eb
+2016-08-10T10:27:01.602392000 1.784146s info: Table 17973274-756f-47a3-b592-703f0ea9d112: Starting a new Raft election for term 5.
+2016-08-10T10:27:01.621932000 1.803686s info: Table 17973274-756f-47a3-b592-703f0ea9d112: This server is Raft leader for term 5. Latest log index is 12.
+2016-08-10T10:27:01.688561000 1.870315s info: Table e3f66531-bdda-42ba-98a8-a5d6ead819a5: Starting a new Raft election for term 5.
+2016-08-10T10:27:01.698375000 1.880129s info: Table e3f66531-bdda-42ba-98a8-a5d6ead819a5: This server is Raft leader for term 5. Latest log index is 12.
+2016-08-10T10:27:01.807150000 1.988904s info: Table 60ca5111-a1b9-40c9-9ff5-bc4c5b045b4d: Starting a new Raft election for term 5.
+2016-08-10T10:27:01.815473000 1.997227s info: Table 60ca5111-a1b9-40c9-9ff5-bc4c5b045b4d: This server is Raft leader for term 5. Latest log index is 12.
+=======
 2016-08-09T16:30:19.667563000 0.008273s notice: Running rethinkdb 2.3.4 (CLANG 7.3.0 (clang-703.0.31))...
 2016-08-09T16:30:19.673187000 0.013893s notice: Running on Darwin 15.3.0 x86_64
 2016-08-09T16:30:19.673240000 0.013945s notice: Loading data from directory /Users/georgiamills/Coding_Projects/airbnb/makers-bnb/rethinkdb_data
@@ -411,3 +433,4 @@
 2016-08-10T12:29:17.627583000 1.942688s info: Table d383a0b3-1def-4f5b-b127-e5f41c2a6fe7: This server is Raft leader for term 2. Latest log index is 3.
 2016-08-10T12:29:17.694780000 2.009885s info: Table 17973274-756f-47a3-b592-703f0ea9d112: This server is Raft leader for term 7. Latest log index is 19.
 2016-08-10T12:35:02.582390000 346.888917s error: Failed to parse one or more lines from the log file, the contents of the `logs` system table will be incomplete. The following parse error occurred: cannot parse log message (2) while parsing "<<<<<<< HEAD"
+>>>>>>> zak

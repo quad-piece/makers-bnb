@@ -1,7 +1,10 @@
 
 h1= title
 
-form(action="/users/new/pageholder", method="post")
+if message && message.length
+      strong #{message}
+
+form(action="/users/new", method="post")
   div.input
     span.label Name
     input(type="text", name="name")

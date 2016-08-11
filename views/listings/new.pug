@@ -1,8 +1,9 @@
 extends ../layout
 
 block content
-  h1= title
 
+ div(class='Listing')
+  h2= 'Input a new space'
   form(id="listings-form" name="submit-listing", action="/listings" method="post")
     div.input
       span.label Title

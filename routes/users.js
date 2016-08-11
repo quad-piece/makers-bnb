@@ -3,6 +3,7 @@ var router = express.Router();
 var userDB = require('../models/userDB')
 var flash = require('connect-flash')
 var bcrypt = require('bcrypt')
+var clientSession = require('client-sessions')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -30,8 +31,24 @@ router.post('/new', function(req, res, next) {
   }
 });
 
-router.get('/pageholder', function(req, res, next) {
-  res.send('This is where you will Log in')
+router.get('/login', function(req, res, next) {
+  res.render('logIn', { title: 'title' })
+});
+
+router.post('/login', function(req, res, next) {
+ userDB.findOne({ email: req.body.email }, function(err, user) {
+   if (!user) {
+     res.render('login.pug', { error: 'Invalid email or password.' });
+   } else {
+     if (req.body.password === user.password) {
+       // sets a cookie with the user's info
+       req.session.user = user;
+       res.redirect('/listings');
+     } else {
+       res.render('login.pug', { error: 'Invalid email or password.' });
+     }
+   }
+ });
 });
 
 module.exports = router;

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1 Listing form submitted
+  ul
+    each val in listings
+      a(href='listings/view?id=' + val.id)
+        div(id='new-listing')
+          div(id='listing-title')=val.title
+          div(id='listing-description')=val.description
+          div(id='listing-location')=val.location
+          div(id='listing-price')='£' + val.price + 'per night'
+      //- p= val.title
+      //- p= val.description
+      //- p= val.price
+      //- p= val.location
+
+      br

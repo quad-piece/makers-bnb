@@ -3,3 +3,27 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  button(onclick="signup()") Sign Up
+  script.
+    function signup() {
+      window.location.href = '/users/new'
+    };
+
+  button(onclick="signin()") Log In
+  script.
+    function signin() {
+      window.location.href = 'users/login'
+    };
+
+  button(onclick="listing()") View listings
+  script.
+    function listing() {
+      window.location.href = '/listings'
+    };
+
+  button(onclick="signout()") Sign out
+  script.
+    function signout() {
+      window.location.href = '/index/goodbye'
+    };

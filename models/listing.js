@@ -16,10 +16,6 @@ var Listing = thinky.createModel('Listing', {
     userId: type.string()
 });
 
-Listing.defineStatic('getTitle', function() {
-  return this.without
-})
-
 module.exports = Listing;
 
 var User = require(__dirname+'/user.js');

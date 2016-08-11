@@ -35,18 +35,17 @@ router.get('/login', function(req, res, next) {
 });
 
 router.post('/login', function(req, res, next){
-  getUsers.filter({email: req.param('email')}).run().then(function(result){
+  user.filter({email: req.param('email')}).run().then(function(result){
     var nonHashedPassword = req.param('password');
-     var hashedPassword = result[0].password;
-     if (bcrypt.compareSync(nonHashedPassword, hashedPassword)) {
-       console.log('great success');
-       req.session.email = req.param('email');
-       res.redirect('/users/dashboard');
-     }
-     else {
-       console.log('sad failure :(');
-       res.redirect('/users/login');
-     }
+    var hashedPassword = result[0].password;
+    if (bcrypt.compareSync(nonHashedPassword, hashedPassword)) {
+      console.log('great success');
+      req.session.email = req.param('email');
+      res.redirect('/users/dashboard');
+    } else {
+      console.log('sad failure :(');
+      res.redirect('/users/login');
+    }
   });
 });
 

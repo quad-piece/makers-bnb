@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2016-08-08T16:10:33.181500000 0.305093s notice: Recursively removing directory /Users/georgiamills/Coding_Projects/airbnb/makers-bnb/rethinkdb_data/tmp
 2016-08-08T16:10:33.183073000 0.306669s notice: Initializing directory /Users/georgiamills/Coding_Projects/airbnb/makers-bnb/rethinkdb_data
 2016-08-08T16:10:33.183155000 0.306747s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/georgiamills/Coding_Projects/airbnb/makers-bnb/rethinkdb_data' did not already exist or is empty.)
@@ -434,3 +435,29 @@
 2016-08-11T09:12:59.420700000 2.333862s info: Table e3f66531-bdda-42ba-98a8-a5d6ead819a5: Starting a new Raft election for term 8.
 2016-08-11T09:12:59.439651000 2.352814s info: Table e3f66531-bdda-42ba-98a8-a5d6ead819a5: This server is Raft leader for term 8. Latest log index is 21.
 2016-08-11T12:10:26.301172000 10648.950600s error: Failed to parse one or more lines from the log file, the contents of the `logs` system table will be incomplete. The following parse error occurred: cannot parse log message (2) while parsing "<<<<<<< HEAD"
+=======
+2016-08-11T12:34:47.292607000 0.004971s notice: Recursively removing directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data/tmp
+2016-08-11T12:34:47.294277000 0.006645s notice: Initializing directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data
+2016-08-11T12:34:47.294400000 0.006764s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data' did not already exist or is empty.)
+2016-08-11T12:34:47.294433000 0.006796s notice: Running rethinkdb 2.3.4 (CLANG 7.3.0 (clang-703.0.31))...
+2016-08-11T12:34:47.298502000 0.010867s notice: Running on Darwin 15.5.0 x86_64
+2016-08-11T12:34:47.298545000 0.010909s notice: Loading data from directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data
+2016-08-11T12:34:47.411707000 0.124071s info: Automatically using cache size of 1097 MB
+2016-08-11T12:34:47.412493000 0.124857s notice: Listening for intracluster connections on port 29015
+2016-08-11T12:34:47.413644000 0.126008s notice: Listening for client driver connections on port 28015
+2016-08-11T12:34:47.413757000 0.126120s notice: Listening for administrative HTTP connections on port 8080
+2016-08-11T12:34:47.413759000 0.126122s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2016-08-11T12:34:47.413762000 0.126126s notice: Listening on driver addresses: 127.0.0.1, ::1
+2016-08-11T12:34:47.413763000 0.126127s notice: Listening on http addresses: 127.0.0.1, ::1
+2016-08-11T12:34:47.413766000 0.126130s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-08-11T12:34:47.413769000 0.126133s notice: Server ready, "Zaks_MacBook_Pro_local_v0h" baffcc39-2686-48b3-a209-ea5d5e9c7c7b
+2016-08-11T12:34:56.473851000 9.186008s info: Table fe9ee843-6b8b-49cc-80d3-52b88b9bb0e6: Starting a new Raft election for term 1.
+2016-08-11T12:34:56.474248000 9.186404s info: Table fe9ee843-6b8b-49cc-80d3-52b88b9bb0e6: Added replica on this server.
+2016-08-11T12:34:56.484908000 9.197065s info: Table 4e444047-76ae-42ef-b690-0f5c6338c2ac: Starting a new Raft election for term 1.
+2016-08-11T12:34:56.485178000 9.197335s info: Table 4e444047-76ae-42ef-b690-0f5c6338c2ac: Added replica on this server.
+2016-08-11T12:34:56.510546000 9.222703s info: Table fe9ee843-6b8b-49cc-80d3-52b88b9bb0e6: This server is Raft leader for term 1. Latest log index is 0.
+2016-08-11T12:34:56.510636000 9.222793s info: Table 4e444047-76ae-42ef-b690-0f5c6338c2ac: This server is Raft leader for term 1. Latest log index is 0.
+2016-08-11T15:06:04.501431000 6975.301597s info: Table 5d454ffa-2df1-43c5-b3f4-6f94b81bfbe9: Starting a new Raft election for term 1.
+2016-08-11T15:06:04.501703000 6975.301869s info: Table 5d454ffa-2df1-43c5-b3f4-6f94b81bfbe9: Added replica on this server.
+2016-08-11T15:06:04.524903000 6975.325069s info: Table 5d454ffa-2df1-43c5-b3f4-6f94b81bfbe9: This server is Raft leader for term 1. Latest log index is 0.
+>>>>>>> origin/geo-zak

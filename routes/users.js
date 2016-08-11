@@ -41,6 +41,7 @@ router.post('/login', function(req, res, next){
      if (bcrypt.compareSync(nonHashedPassword, hashedPassword)) {
        console.log('great success');
        req.session.email = req.param('email');
+       req.session.userID = result[0].id;
        res.redirect('/users/dashboard');
      }
      else {
@@ -52,7 +53,11 @@ router.post('/login', function(req, res, next){
 
 router.get('/dashboard', function(req, res, next){
   res.render('dashboard', { email: req.session.email} );
-  console.log(req.session.email);
+});
+
+router.post('/sessions', function(req, res, next){
+  delete req.session.email;
+  res.redirect('/users/dashboard');
 });
 
 module.exports = router;

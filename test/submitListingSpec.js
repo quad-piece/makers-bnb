@@ -37,7 +37,4 @@ describe('new listings page', function() {
       expect(this.browser.html("body")).to.contain("House");
     });
   });
-
-
-
 });

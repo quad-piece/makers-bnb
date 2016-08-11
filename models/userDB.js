@@ -11,8 +11,9 @@ var r = thinky.r;
 var Users = thinky.createModel('people', {
     id: String,
     name: String,
-    userName: String,
+    username: String,
     email: String,
+    password: String,
 });
 
 module.exports = Users;

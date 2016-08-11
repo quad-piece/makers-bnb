@@ -2,12 +2,12 @@ extends ../layout
 
 block content
   h1 Listing form submitted
-  ul
-    each val in listings
-      div(id=val.id)
-        p= val.title
-        p= val.description
-        p= val.price
-        p= val.location
+  each val in listings
+    a(href='listings/view?id=' + val.id)
+      div(class='listing')
+        div(class='listing-title')=val.title
+        div(class='listing-description')=val.description
+        div(class='listing-location')=val.location
+        div(class='listing-price')='£' + val.price + 'per night'
 
     br

@@ -16,7 +16,7 @@ router.get('/new', function(req, res, next) {
   res.render('../views/listings/new', { title: 'Listings' });
 });
 
-router.post('/new', function(req, res, next) {
+router.post('/', function(req, res, next) {
   listing.save({
     title: req.param('title'),
     description: req.param('description'),
@@ -25,6 +25,15 @@ router.post('/new', function(req, res, next) {
     end_date: req.param('end-date'),
     price: req.param('price')
   }).then(res.redirect('/listings'))
+});
+
+router.get('/view', function(req, res, next) {
+  var listingView;
+  listing.filter({id: req.query.id}).run().then(function(thislisting){
+    listingView = thislisting[0]
+  }).then(function(){
+    res.render('listings/view', {title: 'Listing', showlisting: listingView});
+  });
 });
 
 module.exports = router;

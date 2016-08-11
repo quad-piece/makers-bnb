@@ -1,11 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var clientSession = require('client-sessions')
 var bcrypt = require('bcrypt');
 var flash = require('connect-flash');
 var user = require('../models/user')
 
-
-/* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
@@ -28,6 +27,10 @@ router.post('/new', function(req, res, next) {
     });
     res.redirect('/users');
   }
+});
+
+router.get('/login', function(req, res, next) {
+  res.render('logIn', { title: 'title' })
 });
 
 module.exports = router;

@@ -33,14 +33,8 @@ describe('new listings page', function() {
     .fill("price", 20)
     this.browser.pressButton('Submit Listing!');
     this.browser.wait().then( function() {
-      expect(this.browser.html("h1")).toContain("Listing form submitted");
+      expect(this.browser.html("body")).to.contain("Listing form submitted");
+      expect(this.browser.html("body")).to.contain("House");
     });
   });
-
-  it('should show listings', function(){
-
-    });
-
-
-
 });

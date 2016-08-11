@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var clientSession = require('client-sessions')
+var clientSession = require('client-sessions');
 var bcrypt = require('bcrypt');
 var flash = require('connect-flash');
-var user = require('../models/user')
+var user = require('../models/user');
+var getUsers = require('../models/getUsers');
 
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
@@ -23,14 +24,35 @@ router.post('/new', function(req, res, next) {
       name: req.param('name'),
       userName: req.param('userName'),
       email: req.param('email'),
-      password: bcrypt.hashSync(req.param('password')[0], bcrypt.genSaltSync(8))
+      password: bcrypt.hashSync(req.param('password')[0], (8))
     });
     res.redirect('/users');
   }
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('logIn', { title: 'title' })
+  res.render('login', { title: 'title' })
+});
+
+router.post('/login', function(req, res, next){
+  getUsers.filter({email: req.param('email')}).run().then(function(result){
+    var nonHashedPassword = req.param('password');
+     var hashedPassword = result[0].password;
+     if (bcrypt.compareSync(nonHashedPassword, hashedPassword)) {
+       console.log('great success');
+       req.session.email = req.param('email');
+       res.redirect('/users/dashboard');
+     }
+     else {
+       console.log('sad failure :(');
+       res.redirect('/users/login');
+     }
+  });
+});
+
+router.get('/dashboard', function(req, res, next){
+  res.render('dashboard', { email: req.session.email} );
+  console.log(req.session.email);
 });
 
 module.exports = router;

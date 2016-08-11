@@ -4,14 +4,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var expressSession = require('express-session')
-var flash = require('connect-flash')
+var expressSession = require('express-session');
+var flash = require('connect-flash');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var listings = require('./routes/listings');
 
 var app = express();
-var expressSessions = require('express-session')
+var expressSessions = require('express-session');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,17 +22,14 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser('keyboard cat'));
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 // app.use(express.cookieParser('keyboard cat'));
-app.set('trust proxy', 1) // trust first proxy
+app.set('trust proxy', 1); // trust first proxy
 app.use(expressSessions({
   secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
-}))
+}));
 
 app.use('/', routes);
 app.use('/users', users);

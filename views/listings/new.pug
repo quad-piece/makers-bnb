@@ -3,7 +3,7 @@ extends ../layout
 block content
   h1= title
 
-  form(id="listings-form" name="submit-listing", action="/listings" method="post")
+  form(action="/listings/new", method="post" id='listings-form')
     div.input
       span.label Title
       br

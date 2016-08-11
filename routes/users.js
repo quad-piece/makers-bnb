@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var bcrypt = require('bcrypt');
 var flash = require('connect-flash');
-var userDB = require('../models/userDB')
+var user = require('../models/user')
 
 
 /* GET users listing. */
@@ -15,13 +15,12 @@ router.get('/new', function(req, res, next) {
 });
 
 router.post('/new', function(req, res, next) {
-  console.log(req.param('password'));
   if (req.param('password')[0] !== req.param('password')[1]) {
     req.flash('error', 'Passwords do not match');
     res.redirect('/users/new');
     return
   } else {
-    userDB.save({
+    user.save({
       name: req.param('name'),
       userName: req.param('userName'),
       email: req.param('email'),

@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1 Listing form submitted
+  ul
+    each val in listings
+      li= val.title
+      p= val.description
+      p= val.price
+      p= val.location
+
+      br

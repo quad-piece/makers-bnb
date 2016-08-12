@@ -4,7 +4,6 @@ var clientSession = require('client-sessions');
 var bcrypt = require('bcrypt');
 var flash = require('connect-flash');
 var user = require('../models/user');
-var getUsers = require('../models/getUsers');
 
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
@@ -51,7 +50,6 @@ router.post('/login', function(req, res, next){
 
 router.get('/dashboard', function(req, res, next){
   res.render('dashboard', { email: req.session.email} );
-  console.log(req.session.email);
 });
 
 module.exports = router;

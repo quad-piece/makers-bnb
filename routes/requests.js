@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var request = require('../models/request');
+var listing = require('../models/listing');
 
 router.get('/', function(req, res, next) {
-  var mylistings;
-  console.log(listing);
-  listing.run().then(function(allListings) {
-    mylistings = allListings;
-  }).then(function() {
-    res.render('../views/listings/index', { listings: mylistings })
+  var requestView;
+  listing.filter({id: req.query.id}).run().then(function(thislisting){
+    listingView = thislisting[0]
+  }).then(function(){
+    res.render('listings/view', {title: 'Listing', showlisting: listingView});
   });
 });
 

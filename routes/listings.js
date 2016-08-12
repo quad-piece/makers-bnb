@@ -4,11 +4,10 @@ var listing = require('../models/listing');
 
 router.get('/', function(req, res, next) {
   var mylistings;
-  console.log(listing);
   listing.run().then(function(allListings) {
     mylistings = allListings;
   }).then(function() {
-    res.render('../views/listings/index', { listings: mylistings })
+    res.render('../views/listings/index', { listings: mylistings, email: req.session.email})
   });
 });
 
@@ -17,6 +16,7 @@ router.get('/new', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
+  console.log(req.session.email);
   listing.save({
     title: req.param('title'),
     description: req.param('description'),

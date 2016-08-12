@@ -86,8 +86,8 @@ a {
     font-size: 20px;
 }
 .viewListing{
+    margin: auto;
     margin-top: 100px;
-    margin-left: 100px;
     width: 700px;
     height: 80%;
     /* position: relative; */
@@ -152,6 +152,40 @@ a {
   padding-left: 92px;
 }
 
+.request-form{
+  margin: auto;
+  width: 20%;
+}
+
+.listings-form{
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 700px;
+  height: 80%;
+  /* position: relative; */
+  border: solid;
+  border-color: rgba(0,0,0,0.5);
+  background-color: white;
+  text-align: center;
+  overflow: scroll;
+  color: grey;
+  font-family: comfortaa;
+  font-size: 20px;
+}
+
+.input[type=text] {
+    padding-left: 50px
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 80%;
+}
 /*div#space-listing {
     font-family: comfortaa;
     width: 303px;

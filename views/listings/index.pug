@@ -2,6 +2,20 @@ extends ../layout
 
 block content
 
+  form(action='/listings/search', method='get')
+    h2 Search your location
+    input(type="text" name="location" placeholder="Search locations..")
+    div.actions
+    input(type='submit', value='Search')
+
+
+  //-
+  //- form(action="/users/new", method="post")
+  //-
+  //-     span.label submit
+  //-     input(type="password", name="password")
+  //-   div.actions
+  //-     input(type="submit", value="Sign up")
   each val in listings
     a(class='listing' href='listings/view?id=' + val.id)
       div(class='listing')

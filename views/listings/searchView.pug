@@ -1,0 +1,13 @@
+
+extends ../layout
+
+block content
+
+    br
+      each val in showlistings
+      div(class='searchListing')
+        h2= showlistings.name
+        div(id='listing-title')=showlistings.title
+        div(id='listing-description')=showlistings.description
+        div(id='listing-location')=showlistings.location
+        div(id='listing-price')='£' + showlistings.price + ' per night'

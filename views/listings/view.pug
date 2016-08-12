@@ -12,21 +12,19 @@ block content
 
 
   br
-  h2 Book stay
 
-  form(id="request-form" name="submit-request", action="/requests/confirm?id=" + showlisting.id, method="post")
+  form(class="request-form" name="submit-request", action="/requests/confirm?id=" + showlisting.id, method="post")
+    h2 Book stay
     div.input
       span.label Start Date
       br
-      input(class="start-date-input", type="date", name="start-date")
+      input(id="start-date-input", type="date", name="start-date")
       br
       br
       span.label End Date
       br
-      input(class="end-date-input", type="date", name="end-date")
+      input(id="end-date-input", type="date", name="end-date")
       br
-      br
-      span.label Price
     div.actions
       br
       input(type="submit", value="Request booking")

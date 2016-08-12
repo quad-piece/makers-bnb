@@ -1,17 +1,30 @@
 extends ../layout
 
 block content
-  h1 Listing form submitted
+  .header
+    ul
+      li
+        a.active(href='/') Home
+      li
+        a(href='/users/new') Sign up
+      li
+        a(href='/users/login') Sign in
+      li
+        a(href='/listings') View Listings
+      li
+        a(href='/index/goodbye') Sign out
+
+  h1 Current listings
   each val in listings
     a(href='listings/view?id=' + val.id)
       div(class='listing')
-        div(class='listing-title')=val.title
-        div(class='listing-description')=val.description
-        div(class='listing-location')=val.location
-        div(class='listing-price')='£' + val.price + 'per night'
+        div(id='listing-title')=val.title
+        div(id='listing-description')=val.description
+        div(id='listing-location')=val.location
+        div(id='listing-price')='£' + val.price + 'per night'
 
     br
-      
+
   form(action="/", method="get")
     div.input
     div.actions

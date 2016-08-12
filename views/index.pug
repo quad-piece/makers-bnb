@@ -1,28 +1,44 @@
 extends layout
 
 block content
-  img(class="staycool" src= "https://dl.dropbox.com/s/gcpsnlahyenw5i1/staycooljpg.jpg")
+  .header
+    ul
+      li
+        a.active(href='/') Home
+      li
+        a(href='/users/new') Sign up
+      li
+        a(href='/users/login') Sign in
+      li
+        a(href='/listings') View Listings
+      li
+        a(href='/index/goodbye') Sign out
 
-  button(onclick="signup()") Sign Up
-  script.
-    function signup() {
-      window.location.href = '/users/new'
-    };
+  img(class="image" src= "https://s9.postimg.org/beb793bsv/STAYCOOL2.jpg")
 
-  button(onclick="signin()") Log In
-  script.
-    function signin() {
-      window.location.href = 'users/login'
-    };
-
-  button(onclick="listing()") View listings
-  script.
-    function listing() {
-      window.location.href = '/listings'
-    };
-
-  button(onclick="signout()") Sign out
-  script.
-    function signout() {
-      window.location.href = '/index/goodbye'
-    };
+//- /*https://dl.dropbox.com/s/gcpsnlahyenw5i1/staycooljpg.jpg
+//-     https://postimg.org/image/cgldrmum3/*/
+  //-
+  //- button(onclick="signup()") Sign Up
+  //- script.
+  //-   function signup() {
+  //-     window.location.href = '/users/new'
+  //-   };
+  //-
+  //- button(onclick="signin()") Log In
+  //- script.
+  //-   function signin() {
+  //-     window.location.href = 'users/login'
+  //-   };
+  //-
+  //- button(onclick="listing()") View listings
+  //- script.
+  //-   function listing() {
+  //-     window.location.href = '/listings'
+  //-   };
+  //-
+  //- button(onclick="signout()") Sign out
+  //- script.
+  //-   function signout() {
+  //-     window.location.href = '/index/goodbye'
+  //-   };

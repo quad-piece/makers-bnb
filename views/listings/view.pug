@@ -1,9 +1,28 @@
 extends ../layout
 
 block content
+  .header
+    ul
+      li
+        a.active(href='/') Home
+      li
+        a(href='/users/new') Sign up
+      li
+        a(href='/users/login') Sign in
+      li
+        a(href='/listings') View Listings
+      li
+        a(href='/index/goodbye') Sign out
+
   div(class='Listing')
     h2= showlisting.name
     div(id='listing-title')=showlisting.title
     div(id='listing-description')=showlisting.description
     div(id='listing-location')=showlisting.location
     div(id='listing-price')='£' + showlisting.price + ' per night'
+
+    button(onclick="request()") Request to book
+    script.
+      function request() {
+        window.location.href = '/requests'
+      };

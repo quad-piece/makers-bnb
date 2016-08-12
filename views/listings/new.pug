@@ -3,8 +3,6 @@ extends ../layout
 block content
 
 
-if currentuser
-
   div(class='Listing')
     h2= 'Input a new space'
     form(id="listings-form" name="submit-listing", action="/listings/" method="post")
@@ -40,5 +38,3 @@ if currentuser
       div.actions
         br
         input(type="submit", value="Submit Listing!")
-
-else Please log in

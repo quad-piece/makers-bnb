@@ -7,7 +7,7 @@ var user = require('../models/user');
 var getUsers = require('../models/getUsers');
 
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('newSignUp', { name:req.session.firstname,  email: req.session.email })
 });
 
 router.get('/new', function(req, res, next) {
@@ -26,6 +26,8 @@ router.post('/new', function(req, res, next) {
       email: req.param('email'),
       password: bcrypt.hashSync(req.param('password')[0], (8))
     });
+    req.session.email = req.param('email');
+    req.session.firstname = req.param('name')
     res.redirect('/users');
   }
 });
@@ -41,7 +43,7 @@ router.post('/login', function(req, res, next){
      if (bcrypt.compareSync(nonHashedPassword, hashedPassword)) {
        console.log('great success');
        req.session.email = req.param('email');
-       req.session.userID = result[0].id;
+       req.session.firstname = result[0].name;
        res.redirect('/users/dashboard');
      }
      else {

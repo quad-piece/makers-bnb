@@ -9,6 +9,7 @@ var flash = require('connect-flash');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var listings = require('./routes/listings');
+var requests = require('./routes/requests');
 
 var app = express();
 var expressSessions = require('express-session');
@@ -34,6 +35,7 @@ app.use(expressSessions({
 app.use('/', routes);
 app.use('/users', users);
 app.use('/listings', listings);
+app.use('/requests', requests);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

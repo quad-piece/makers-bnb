@@ -9,8 +9,10 @@ var User = thinky.createModel('User', {
     id: type.string(),
     name: type.string(),
     userName: type.string(),
-    email: type.string(),
-    password: type.string()
-});
+    password: type.string(),
+    email: type.string()
+  });
+
+
 
 module.exports = User;

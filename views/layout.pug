@@ -2,20 +2,30 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     .header
       ul
         li
+          img(src= "https://s10.postimg.org/og46x8m3t/staycoolnobacground.png")
+        li
+          a.active(href='/')
+        li
+          a.active(href='/')
+        li
           a.active(href='/') Home
         li
-          a(href='/users/new') Sign up
+          if !email
+            a(href='/users/new') Sign up
         li
-          a(href='/users/login') Sign in
+          if !email
+            a(href='/users/login') Sign in
         li
           a(href='/listings') View Listings
         li
-          a(href='/users/sessions') Sign out
+          if email
+            a(href='/users/sessions') Sign out
         li
           if email
             a(href='/listings/new') Add listing

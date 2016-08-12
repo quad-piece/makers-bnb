@@ -4,12 +4,17 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+a:-webkit-any-link {
+  text-decoration: none !important;
+}
+
 a {
   color: #00B7FF;
 }
 
 
 .header ul {
+    position: relative;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -25,8 +30,20 @@ a {
     display: block;
     color: white;
     text-align: center;
+    margin-left: 15px;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.header li img{
+  margin-top: 4px;
+  margin-left: 10px;
+  position: absolute;
+  min-height: 25px;
+  min-width: 25px;
+  width: 90px;
+  height: 40px;
+
 }
 .email {
     text-align: right;
@@ -58,14 +75,34 @@ a {
     width: 700px;
     height: 80%;
     /* position: relative; */
-    margin-top: 100px;
+    /*margin-top: 100px;*/
     border: solid;
     border-color: transparent;
     background-color: rgba(0,0,0,0.5);
     text-align: center;
     overflow: scroll;
-    color: rgba(255,255,255,0.5);
+    color: white;
     font-family: comfortaa;
+    font-size: 20px;
+}
+.viewListing{
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 700px;
+    height: 80%;
+    /* position: relative; */
+    border: solid;
+    border-color: transparent;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    overflow: scroll;
+    color: white;
+    font-family: comfortaa;
+    font-size: 20px;
+}
+
+.listing:hover {
+  background-color: #21828D;
 }
 
 .fullscreen-bg {
@@ -108,6 +145,11 @@ a {
   .fullscreen-bg__video {
     display: none;
   }
+}
+
+.stay-cool-image {
+  width: 90%;
+  padding-left: 92px;
 }
 
 /*div#space-listing {

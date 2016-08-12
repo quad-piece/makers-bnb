@@ -5,7 +5,7 @@ block content
 
   h1 Current listings
   each val in listings
-    a(href='listings/view?id=' + val.id)
+    a(class='listing' href='listings/view?id=' + val.id)
       div(class='listing')
         div(id='listing-title')=val.title
         div(id='listing-description')=val.description

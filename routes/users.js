@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/new', function(req, res, next) {
-  res.render('userNew', { title: 'title' })
+  res.render('userNew', { title: 'title', email: req.session.email })
 });
 
 router.post('/new', function(req, res, next) {
@@ -31,7 +31,7 @@ router.post('/new', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'title' })
+  res.render('login', { title: 'title', email: req.session.email  })
 });
 
 router.post('/login', function(req, res, next){
@@ -51,11 +51,15 @@ router.post('/login', function(req, res, next){
   });
 });
 
+router.get('/areyousure', function(req, res, next){
+  res.redirect('/users/sessions');
+});
+
 router.get('/dashboard', function(req, res, next){
   res.render('dashboard', { email: req.session.email} );
 });
 
-router.post('/sessions', function(req, res, next){
+router.get('/sessions', function(req, res, next){
   delete req.session.email;
   res.redirect('/users/dashboard');
 });

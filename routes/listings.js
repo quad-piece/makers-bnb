@@ -8,12 +8,12 @@ router.get('/', function(req, res, next) {
   listing.run().then(function(allListings) {
     mylistings = allListings;
   }).then(function() {
-    res.render('../views/listings/index', { listings: mylistings })
+    res.render('../views/listings/index', { listings: mylistings, email: req.session.email })
   });
 });
 
 router.get('/new', function(req, res, next) {
-  res.render('../views/listings/new', { title: 'Listings' });
+  res.render('../views/listings/new', { title: 'Listings', email: req.session.email });
 });
 
 router.post('/', function(req, res, next) {
@@ -32,7 +32,7 @@ router.get('/view', function(req, res, next) {
   listing.filter({id: req.query.id}).run().then(function(thislisting){
     listingView = thislisting[0]
   }).then(function(){
-    res.render('listings/view', {title: 'Listing', showlisting: listingView});
+    res.render('listings/view', {title: 'Listing', showlisting: listingView, email: req.session.email});
   });
 });
 

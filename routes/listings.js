@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var listing = require('../models/listing');
+var user = require('../models/user');
 
 router.get('/', function(req, res, next) {
   var mylistings;
-  console.log(listing);
   listing.run().then(function(allListings) {
     mylistings = allListings;
   }).then(function() {
@@ -17,14 +17,20 @@ router.get('/new', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-  listing.save({
-    title: req.param('title'),
-    description: req.param('description'),
-    location: req.param('location'),
-    start_date: req.param('start-date'),
-    end_date: req.param('end-date'),
-    price: req.param('price')
-  }).then(res.redirect('/listings'))
+  var thisUserId
+  user.filter({email: req.session.email}).run().then(function(thisUser){
+    thisUserId = thisUser[0].id
+  }).then(function(){
+    listing.save({
+      title: req.param('title'),
+      description: req.param('description'),
+      location: req.param('location'),
+      start_date: req.param('start-date'),
+      end_date: req.param('end-date'),
+      price: req.param('price'),
+      userId: thisUserId
+    }).then(res.redirect('/listings'))
+  });
 });
 
 router.get('/view', function(req, res, next) {

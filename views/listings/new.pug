@@ -3,42 +3,43 @@ extends ../layout
 block content
 
 
-if currentuser
+  if email
 
-  div(class='Listing')
-    h2= 'Input a new space'
-    form(id="listings-form" name="submit-listing", action="/listings/" method="post")
-      div.input
-        span.label Title
-        br
-        input(class="title-input", type="text", name="title")
-        br
-        br
-        span.label Description
-        br
-        textarea(rows="5" cols="50" class="description-input", form="listings-form", name="description")
-        br
-        br
-        span.label Location
-        br
-        input(class="location-input", type="text", name="location")
-        br
-        br
-        span.label Start Date
-        br
-        input(class="start-date-input", type="date", name="start-date")
-        br
-        br
-        span.label End Date
-        br
-        input(class="end-date-input", type="date", name="end-date")
-        br
-        br
-        span.label Price
-        br
-        input(class="price-input", type="text", name="price")
-      div.actions
-        br
-        input(type="submit", value="Submit Listing!")
+    div(class='Listing')
+      h2= 'Input a new space'
+      form(id="listings-form" name="submit-listing", action="/listings/" method="post")
+        div.input
+          span.label Title
+          br
+          input(class="title-input", type="text", name="title")
+          br
+          br
+          span.label Description
+          br
+          textarea(rows="5" cols="50" class="description-input", form="listings-form", name="description")
+          br
+          br
+          span.label Location
+          br
+          input(class="location-input", type="text", name="location")
+          br
+          br
+          span.label Start Date
+          br
+          input(class="start-date-input", type="date", name="start-date")
+          br
+          br
+          span.label End Date
+          br
+          input(class="end-date-input", type="date", name="end-date")
+          br
+          br
+          span.label Price
+          br
+          input(class="price-input", type="text", name="price")
+        div.actions
+          br
+          input(type="submit", value="Submit Listing!")
 
-else Please log in
+  else
+    h2 Please log in

@@ -37,6 +37,15 @@ router.post('/', function(req, res, next) {
   });
 });
 
+router.get('/search', function(req, res, next) {
+  var mylistings;
+  listing.filter({location: req.param('location')}).run().then(function(allListings) {
+    mylistings = allListings;
+  }).then(function() {
+    res.render('../views/listings/index', { listings: mylistings, email: req.session.email })
+  });
+});
+
 router.get('/view', function(req, res, next) {
   var listingView;
   listing.filter({id: req.query.id}).run().then(function(thislisting){

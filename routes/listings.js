@@ -13,7 +13,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/new', function(req, res, next) {
+  if (req.session.email) {
   res.render('../views/listings/new', { title: 'Listings', email: req.session.email });
+  } else {
+    res.redirect('/users/login')
+  };
 });
 
 router.post('/', function(req, res, next) {

@@ -1,18 +1,7 @@
 extends layout
 
 block content
-  //- .header
-  //-   ul
-  //-     li
-  //-       a.active(href='/') Home
-  //-     li
-  //-       a(href='/users/new') Sign up
-  //-     li
-  //-       a(href='/users/login') Sign in
-  //-     li
-  //-       a(href='/listings') View Listings
-  //-     li
-  //-       a(href='/index/goodbye') Sign out
+
   h1= Hello
   p Welcome to log in
 
@@ -26,8 +15,3 @@ block content
     div.input
     div.actions
       input(type="submit", value="Log in")
-
-    form(action="/", method="get")
-      div.input
-      div.actions
-      input(type="submit", value="Go Home")

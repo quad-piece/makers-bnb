@@ -7,7 +7,7 @@ var user = require('../models/user');
 var getUsers = require('../models/getUsers');
 
 router.get('/', function(req, res, next) {
-  res.render('newSignUp', { name:req.session.firstname,  email: req.session.email })
+  res.send('respond with a resource');
 });
 
 router.get('/new', function(req, res, next) {
@@ -26,8 +26,6 @@ router.post('/new', function(req, res, next) {
       email: req.param('email'),
       password: bcrypt.hashSync(req.param('password')[0], (8))
     });
-    req.session.email = req.param('email');
-    req.session.firstname = req.param('name')
     res.redirect('/users');
   }
 });

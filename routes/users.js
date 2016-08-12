@@ -7,7 +7,7 @@ var user = require('../models/user');
 var getUsers = require('../models/getUsers');
 
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+ res.render('newSignUp', { name:req.session.firstname,  email: req.session.email })
 });
 
 router.get('/new', function(req, res, next) {

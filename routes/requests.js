@@ -4,7 +4,6 @@ var request = require('../models/request');
 
 router.get('/', function(req, res, next) {
   var mylistings;
-  console.log(listing);
   listing.run().then(function(allListings) {
     mylistings = allListings;
   }).then(function() {

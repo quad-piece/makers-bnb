@@ -1,24 +1,29 @@
-2016-08-12T11:43:17.635178000 0.310669s notice: Recursively removing directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data/tmp
-2016-08-12T11:43:17.636337000 0.311830s notice: Initializing directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data
-2016-08-12T11:43:17.636411000 0.311901s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data' did not already exist or is empty.)
-2016-08-12T11:43:17.636431000 0.311921s notice: Running rethinkdb 2.3.4 (CLANG 7.3.0 (clang-703.0.31))...
-2016-08-12T11:43:17.639856000 0.315347s notice: Running on Darwin 15.5.0 x86_64
-2016-08-12T11:43:17.639894000 0.315383s notice: Loading data from directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data
-2016-08-12T11:43:17.761583000 0.437073s info: Automatically using cache size of 414 MB
-2016-08-12T11:43:17.762402000 0.437892s notice: Listening for intracluster connections on port 29015
-2016-08-12T11:43:17.763667000 0.439157s notice: Listening for client driver connections on port 28015
-2016-08-12T11:43:17.763757000 0.439246s notice: Listening for administrative HTTP connections on port 8080
-2016-08-12T11:43:17.763759000 0.439248s notice: Listening on cluster addresses: 127.0.0.1, ::1
-2016-08-12T11:43:17.763763000 0.439253s notice: Listening on driver addresses: 127.0.0.1, ::1
-2016-08-12T11:43:17.763765000 0.439254s notice: Listening on http addresses: 127.0.0.1, ::1
-2016-08-12T11:43:17.763768000 0.439257s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
-2016-08-12T11:43:17.763771000 0.439260s notice: Server ready, "Zaks_MacBook_Pro_local_6wg" 2cef72d6-b459-4ccd-b3f9-39f522e9a584
-2016-08-12T11:43:22.121525000 4.796934s info: Table f5bc9ff2-b8ec-49d7-9d0b-060a501b72bc: Starting a new Raft election for term 1.
-2016-08-12T11:43:22.121956000 4.797365s info: Table f5bc9ff2-b8ec-49d7-9d0b-060a501b72bc: Added replica on this server.
-2016-08-12T11:43:22.121960000 4.797368s info: Table 220a1b48-f1d0-4984-8a8c-ba9ae64e9284: Starting a new Raft election for term 1.
-2016-08-12T11:43:22.122048000 4.797457s info: Table 220a1b48-f1d0-4984-8a8c-ba9ae64e9284: Added replica on this server.
-2016-08-12T11:43:22.165687000 4.841097s info: Table 66a4ca7d-9e82-41ba-9f56-1bcdce21be70: Starting a new Raft election for term 1.
-2016-08-12T11:43:22.165991000 4.841400s info: Table 66a4ca7d-9e82-41ba-9f56-1bcdce21be70: Added replica on this server.
-2016-08-12T11:43:22.185843000 4.861251s info: Table f5bc9ff2-b8ec-49d7-9d0b-060a501b72bc: This server is Raft leader for term 1. Latest log index is 0.
-2016-08-12T11:43:22.185926000 4.861335s info: Table 220a1b48-f1d0-4984-8a8c-ba9ae64e9284: This server is Raft leader for term 1. Latest log index is 0.
-2016-08-12T11:43:22.186000000 4.861409s info: Table 66a4ca7d-9e82-41ba-9f56-1bcdce21be70: This server is Raft leader for term 1. Latest log index is 0.
+2016-08-12T12:22:39.021778000 0.307977s notice: Recursively removing directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data/tmp
+2016-08-12T12:22:39.023090000 0.309291s notice: Initializing directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data
+2016-08-12T12:22:39.023160000 0.309356s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data' did not already exist or is empty.)
+2016-08-12T12:22:39.023179000 0.309376s notice: Running rethinkdb 2.3.4 (CLANG 7.3.0 (clang-703.0.31))...
+2016-08-12T12:22:39.027140000 0.313338s notice: Running on Darwin 15.5.0 x86_64
+2016-08-12T12:22:39.027186000 0.313383s notice: Loading data from directory /Users/Zak/Projects/MakersAcademy/week-06/makers-bnb/rethinkdb_data
+2016-08-12T12:22:39.152424000 0.438620s info: Automatically using cache size of 387 MB
+2016-08-12T12:22:39.153168000 0.439365s notice: Listening for intracluster connections on port 29015
+2016-08-12T12:22:39.154243000 0.440440s notice: Listening for client driver connections on port 28015
+2016-08-12T12:22:39.154335000 0.440532s notice: Listening for administrative HTTP connections on port 8080
+2016-08-12T12:22:39.154350000 0.440547s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2016-08-12T12:22:39.154362000 0.440558s notice: Listening on driver addresses: 127.0.0.1, ::1
+2016-08-12T12:22:39.154364000 0.440560s notice: Listening on http addresses: 127.0.0.1, ::1
+2016-08-12T12:22:39.154368000 0.440565s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-08-12T12:22:39.154373000 0.440569s notice: Server ready, "Zaks_MacBook_Pro_local_yq9" 916e06d6-72bd-4d0c-a097-2e42016fe093
+2016-08-12T12:22:43.045699000 4.331804s info: Table 9785d3c2-dd9e-47c8-985d-0344f5452ca2: Starting a new Raft election for term 1.
+2016-08-12T12:22:43.046036000 4.332141s info: Table 9785d3c2-dd9e-47c8-985d-0344f5452ca2: Added replica on this server.
+2016-08-12T12:22:43.073320000 4.359424s info: Table 3266e7dc-1151-4280-b250-cd2e370f57c8: Starting a new Raft election for term 1.
+2016-08-12T12:22:43.073524000 4.359629s info: Table 3266e7dc-1151-4280-b250-cd2e370f57c8: Added replica on this server.
+2016-08-12T12:22:43.082276000 4.368381s info: Table be6967d6-ff4d-48d3-830f-f904dfa18b96: Starting a new Raft election for term 1.
+2016-08-12T12:22:43.082541000 4.368645s info: Table be6967d6-ff4d-48d3-830f-f904dfa18b96: Added replica on this server.
+2016-08-12T12:22:43.101576000 4.387681s info: Table 9785d3c2-dd9e-47c8-985d-0344f5452ca2: This server is Raft leader for term 1. Latest log index is 0.
+2016-08-12T12:22:43.101704000 4.387808s info: Table 3266e7dc-1151-4280-b250-cd2e370f57c8: This server is Raft leader for term 1. Latest log index is 0.
+2016-08-12T12:22:43.101782000 4.387887s info: Table be6967d6-ff4d-48d3-830f-f904dfa18b96: This server is Raft leader for term 1. Latest log index is 0.
+2016-08-12T12:39:37.907830000 1019.167634s notice: Server got SIGINT from pid 7316, uid 501; shutting down...
+2016-08-12T12:39:37.908100000 1019.167903s notice: Shutting down client connections...
+2016-08-12T12:39:37.913010000 1019.172813s notice: All client connections closed.
+2016-08-12T12:39:37.913020000 1019.172822s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-08-12T12:39:37.919765000 1019.179568s notice: Storage engine shut down.

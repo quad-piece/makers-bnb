@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+
+  br
+  h2 Book your stay at #{showlisting.title}
+
+  form(id="listings-form" name="submit-request", action="/requests/submit" method="post")
+    div
+      p Your trip from #{startDate.toDateString()} to #{endDate.toDateString()}
+      p Total Price for #{nights} nights is £#{cost}
+
+    div.actions
+      br
+      input(type="submit", value="Confirm request")

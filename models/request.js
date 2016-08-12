@@ -10,8 +10,10 @@ var Request = thinky.createModel("Request", {
     start_date: type.date(),
     end_date: type.date(),
     price: type.number(),
+    nights: type.number(),
     listingId: type.string(),
-    userId: type.string()
+    listingUserId: type.string(),
+    requestUserId: type.string()
 });
 
 module.exports = Request;
@@ -19,4 +21,4 @@ module.exports = Request;
 var Listing = require(__dirname+'/listing.js');
 Request.belongsTo(Listing, "listing", "listingId", "id");
 var User = require(__dirname+'/user.js');
-Request.belongsTo(User, "user", "userId", "id");
+Request.belongsTo(User, "user", "requestUserId", "id");

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  div(class="fullscreen-bg")
+    video(loop muted autoplay poster="../images/Walking-By/Snapshots/Walking-By.jpg" class="fullscreen-bg__video")
+      source(src="../images/Walking-By/WEBM/Walking-By.webm" type="video/webm")
+      source(src="../images/Walking-By/MP4/Walking-By.mp4" type="video/mp4")
+      source(src="../images/Walking-By/OGV/Walking-By.ogv" type="video/ogg")
+
+  if email
+    h1 Welcome!
+    p= email
+  else
+    img(class="image" src= "https://s9.postimg.org/udr1f4hsf/Goodbybackground.png")

@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+
+
+  h1 Current listings
+  each val in listings
+    a(class='listing' href='listings/view?id=' + val.id)
+      div(class='listing')
+        div(id='listing-title')=val.title
+        div(id='listing-description')=val.description
+        div(id='listing-location')=val.location
+        div(id='listing-price')='£' + val.price + 'per night'
+
+    br

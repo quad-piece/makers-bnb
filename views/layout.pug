@@ -2,6 +2,34 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    .header
+      ul
+        li
+          img(src= "https://s10.postimg.org/og46x8m3t/staycoolnobacground.png")
+        li
+          a.active(href='/')
+        li
+          a.active(href='/')
+        li
+          a.active(href='/') Home
+        li
+          if !email
+            a(href='/users/new') Sign up
+        li
+          if !email
+            a(href='/users/login') Sign in
+        li
+          a(href='/listings') View Listings
+        li
+          if email
+            a(href='/users/sessions') Sign out
+        li
+          if email
+            a(href='/listings/new') Add listing
+
+        p(class='email')= email
+
+  block content

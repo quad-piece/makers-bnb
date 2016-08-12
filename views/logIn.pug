@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+  h1= Hello
+  p Welcome to log in
+
+  form(action="/users/login", method="post")
+    div.input
+      span.label email
+      input(type="email", name="email")
+    div.input
+      span.label Password
+      input(type="password", name="password")
+    div.input
+    div.actions
+      input(type="submit", value="Log in")

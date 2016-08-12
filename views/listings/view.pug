@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-  
+
   div(class='Listing')
     h2= showlisting.name
     div(id='listing-title')=showlisting.title
@@ -9,8 +9,23 @@ block content
     div(id='listing-location')=showlisting.location
     div(id='listing-price')='£' + showlisting.price + ' per night'
 
-    button(onclick="request()") Request to book
-    script.
-      function request() {
-        window.location.href = '/requests'
-      };
+
+  br
+  h2 Book stay
+
+  form(id="request-form" name="submit-request", action="/requests/confirm?id=" + showlisting.id, method="post")
+    div.input
+      span.label Start Date
+      br
+      input(class="start-date-input", type="date", name="start-date")
+      br
+      br
+      span.label End Date
+      br
+      input(class="end-date-input", type="date", name="end-date")
+      br
+      br
+      span.label Price
+    div.actions
+      br
+      input(type="submit", value="Request booking")

@@ -14,19 +14,22 @@ html
         li
           a.active(href='/')
         li
-          a(href='/users/new') Sign up
+          a.active(href='/') Home
         li
-          a(href='/users/login') Sign in
+          if !email
+            a(href='/users/new') Sign up
+        li
+          if !email
+            a(href='/users/login') Sign in
         li
           a(href='/listings') View Listings
         li
-          a(href='/users/sessions') Sign out
+          if email
+            a(href='/users/sessions') Sign out
         li
           if email
             a(href='/listings/new') Add listing
 
         p(class='email')= email
-
-
 
   block content

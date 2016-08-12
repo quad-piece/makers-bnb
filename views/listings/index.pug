@@ -2,8 +2,6 @@ extends ../layout
 
 block content
 
-
-  h1 Current listings
   each val in listings
     a(class='listing' href='listings/view?id=' + val.id)
       div(class='listing')
